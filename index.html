@@ -18,6 +18,11 @@
         <p><strong>ID Number:</strong> CT-7567</p>
     </div>
 </div>
+<!-- QR Code container -->
+    <div class="qr-code-container">
+        <canvas id="qrcode"></canvas>
+    </div>
+</div>
 
 <!-- Back ID Card -->
 <div class="id-card back">
@@ -35,25 +40,21 @@
         <p><strong>Homeworld:</strong> Kamino</p>
     </div>
 
-    <!-- QR Code container -->
-    <div class="qr-code-container">
-        <canvas id="qrcode"></canvas>
-    </div>
-</div>
-
-<!-- QR code library and script -->
 <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
 <script>
-    const qrUrl = 'https://apcctbanastao.github.io/SchoolID/'; // <-- replace with your GitHub Pages URL
-    QRCode.toCanvas(document.getElementById('qrcode'), qrUrl, {
-        width: 120,
-        color: { dark: '#00eaff', light: 'transparent' }
-    }, function(error) {
-        if(error) console.error(error);
-        console.log('QR code generated!');
+    window.addEventListener('DOMContentLoaded', () => {
+        const qrUrl = 'https://apcctbanastao.github.io/SchoolID/'; // <-- replace with your GitHub Pages URL
+        QRCode.toCanvas(document.getElementById('qrcode'), qrUrl, {
+            width: 120,
+            color: { dark: '#00eaff', light: 'transparent' }
+        }, function(error) {
+            if(error) console.error(error);
+            console.log('QR code generated!');
+        });
     });
 </script>
 
 </body>
 </html>
+
 
