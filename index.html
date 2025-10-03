@@ -42,6 +42,26 @@
     <canvas id="qrcode"></canvas>
 </div>
 </div>
+	<!-- QR code library -->
+<script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+
+<!-- Generate QR code -->
+<script>
+  // Replace the URL below with your GitHub Pages URL
+  const qrUrl = 'https://yourusername.github.io/SchoolID/';
+
+  QRCode.toCanvas(document.getElementById('qrcode'), qrUrl, {
+    width: 120,
+    color: {
+      dark: '#00eaff',       // glowing QR pixels
+      light: 'transparent'   // background matches your ID card
+    }
+  }, function (error) {
+    if (error) console.error(error);
+    console.log('QR code generated!');
+  });
+</script>
 </body>
 
 </html>
+
