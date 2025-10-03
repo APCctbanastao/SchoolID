@@ -115,6 +115,7 @@ body::before {
     text-shadow: 0 0 6px #00eaff;
 }
 
+/* BACK OF THE CARD STARTS HERE!!*/
 .id-card.back {
     background: rgba(20, 20, 20, 0.95);
     text-align: left;
@@ -140,10 +141,11 @@ body::before {
     color: #00eaff;
 }
 
+/* QR STARTS HERE!!! */
 .qr-code-container {
     display: flex;
     justify-content: center;
-    margin-top: auto;  /* pushes QR to bottom */
+    margin-top: auto;  
 }
 
 #qrcode {
@@ -159,3 +161,4 @@ body::before {
     0% { box-shadow: 0 0 10px #00eaff; }
     100% { box-shadow: 0 0 25px #00eaff; }
 }
+
