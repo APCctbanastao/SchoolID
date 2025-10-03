@@ -43,11 +43,11 @@
 </div>
 
 <!-- QR code script -->
-<script src="https://apcctbanastao.github.io/SchoolID/"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
 <script>
 window.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('qrcode');
-    const qrUrl = 'https://yourusername.github.io/SchoolID/'; // <-- replace with your GitHub Pages URL
+    const qrUrl = 'https://apcctbanastao.github.io/SchoolID/'; // <-- replace with your GitHub Pages URL
 
     QRCode.toCanvas(canvas, qrUrl, {
         width: 120,
@@ -58,6 +58,9 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
+
+    
+
 
 
 
