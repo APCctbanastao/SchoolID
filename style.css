@@ -10,7 +10,6 @@ body {
     position: relative;
 }
 
-/* Starry animated background */
 body::before {
     content: "";
     position: absolute;
@@ -27,17 +26,20 @@ body::before {
     to { transform: translate(-1000px, -1000px); }
 }
 
-/* Container for front + back cards */
 .cards-container {
     display: flex;
-    gap: 20px;              /* space between front and back */
-    align-items: stretch;    /* ensures both cards have same height */
+    flex-direction: row;
+    gap: 20px;
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-/* ID Card common styling */
 .id-card {
     width: 360px;
-    min-height: 500px;  /* allows card to grow for info + QR */
+    min-height: 550px;
     border: 2px solid #ffd600;
     border-radius: 50px / 25px;
     background: rgba(10, 20, 40, 0.95);
@@ -46,12 +48,12 @@ body::before {
     box-shadow: 0 0 20px #ffd600, 0 0 40px #008c9e inset;
     backdrop-filter: blur(6px);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     display: flex;
-    flex-direction: column; /* stack content vertically */
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
-/* Glow border */
 .id-card::before {
     content: "";
     position: absolute;
@@ -76,7 +78,6 @@ body::before {
     z-index: 1;
 }
 
-/* Logos and images */
 .logo {
     font-size: 22px;
     font-weight: bold;
@@ -103,7 +104,6 @@ body::before {
     margin-bottom: 15px;
 }
 
-/* Info text */
 .info {
     text-align: left;
     font-size: 16px;
@@ -115,13 +115,11 @@ body::before {
     text-shadow: 0 0 6px #00eaff;
 }
 
-/* Back card specific */
 .id-card.back {
     background: rgba(20, 20, 20, 0.95);
     text-align: left;
 }
 
-/* Back header */
 .back-header {
     font-size: 20px;
     font-weight: bold;
@@ -132,7 +130,6 @@ body::before {
     text-shadow: 0 0 10px #00eaff, 0 0 20px #008c9e;
 }
 
-/* Details on back */
 .details {
     font-size: 16px;
     color: #e0f7fa;
@@ -143,13 +140,12 @@ body::before {
     color: #00eaff;
 }
 
-/* QR code container */
 .qr-code-container {
-    display: block;                  /* flows below info naturally */
-    margin: 20px auto 0 auto;        /* spacing from info, centered horizontally */
+    display: flex;
+    justify-content: center;
+    margin-top: auto;  /* pushes QR to bottom */
 }
 
-/* QR canvas style */
 #qrcode {
     width: 120px;
     height: 120px;
