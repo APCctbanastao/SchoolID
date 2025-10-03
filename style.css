@@ -1,4 +1,4 @@
-/* General body */
+/* Body styling */
 body {
     font-family: Orbitron, sans-serif;
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
@@ -13,7 +13,7 @@ body {
     position: relative;
 }
 
-/* Starry effect */
+/* Starry background */
 body::before {
     content: "";
     position: absolute;
@@ -30,7 +30,7 @@ body::before {
     to { transform: translate(-1000px, -1000px); }
 }
 
-/* ID Card styling */
+/* ID Card */
 .id-card {
     width: 360px;
     border: 2px solid #ffd600;
@@ -44,7 +44,7 @@ body::before {
     overflow: hidden;
 }
 
-/* Holographic glow border */
+/* Glow border */
 .id-card::before {
     content: "";
     position: absolute;
@@ -64,12 +64,9 @@ body::before {
     z-index: 0;
 }
 
-.id-card * {
-    position: relative;
-    z-index: 1;
-}
+.id-card * { position: relative; z-index: 1; }
 
-/* Logo and images */
+/* Logos and images */
 .logo {
     font-size: 22px;
     font-weight: bold;
@@ -104,10 +101,7 @@ body::before {
     color: #e0f7fa;
 }
 
-.info strong {
-    color: #00eaff;
-    text-shadow: 0 0 6px #00eaff;
-}
+.info strong { color: #00eaff; text-shadow: 0 0 6px #00eaff; }
 
 /* Back ID styling */
 .id-card.back {
@@ -131,17 +125,19 @@ body::before {
     line-height: 1.6;
 }
 
-.details strong {
-    color: #00eaff;
-}
+.details strong { color: #00eaff; }
 
+/* QR code on front card bottom-center */
 .qr-code-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px; /* spacing below info */
+    position: absolute;
+    bottom: 20px;       /* distance from bottom of card */
+    left: 50%;          /* center horizontally */
+    transform: translateX(-50%);
 }
 
 #qrcode {
+    width: 120px;
+    height: 120px;
     border: 2px solid #00eaff;
     border-radius: 8px;
     box-shadow: 0 0 15px #00eaff;
@@ -152,4 +148,3 @@ body::before {
     0% { box-shadow: 0 0 10px #00eaff; }
     100% { box-shadow: 0 0 25px #00eaff; }
 }
-
