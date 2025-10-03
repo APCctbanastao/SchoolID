@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,13 +11,14 @@
     <img src="Galactic_Republic_Symbol.webp" class="gar-logo">
     <div class="logo">Grand Army of the Republic</div>
     <img src="0d36418597d223ec0bf6a4f0aaaedb89.jpg" class="student-photo">
+
     <div class="info">
         <p><strong>Name:</strong> Captain Rex of the 501st Legion </p>
         <p><strong>Course & Year:</strong> ARC 1st year</p>
         <p><strong>ID Number:</strong> CT-7567</p>
     </div>
-</div>
-<!-- QR Code container -->
+
+    <!-- QR code container at bottom-center -->
     <div class="qr-code-container">
         <canvas id="qrcode"></canvas>
     </div>
@@ -39,22 +39,22 @@
         <p><strong>Species:</strong> Human (Clone)</p>
         <p><strong>Homeworld:</strong> Kamino</p>
     </div>
+</div>
 
+<!-- QR code script -->
 <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
 <script>
-    window.addEventListener('DOMContentLoaded', () => {
-        const qrUrl = 'https://apcctbanastao.github.io/SchoolID/'; // <-- replace with your GitHub Pages URL
-        QRCode.toCanvas(document.getElementById('qrcode'), qrUrl, {
-            width: 120,
-            color: { dark: '#00eaff', light: 'transparent' }
-        }, function(error) {
-            if(error) console.error(error);
-            console.log('QR code generated!');
-        });
+window.addEventListener('DOMContentLoaded', () => {
+    const qrUrl = 'https://yourusername.github.io/SchoolID/'; // <-- replace with your GitHub Pages URL
+    QRCode.toCanvas(document.getElementById('qrcode'), qrUrl, {
+        width: 120,
+        color: { dark: '#00eaff', light: 'transparent' }
+    }, function(error) {
+        if(error) console.error(error);
+        console.log('QR code generated!');
     });
+});
 </script>
 
 </body>
 </html>
-
-
