@@ -140,3 +140,26 @@ body::before {
 .details strong {
     color: #00eaff;
 }
+
+.qr-code-container {
+    position: absolute;
+    bottom: 20px;      /* distance from bottom edge */
+    left: 50%;         /* center horizontally */
+    transform: translateX(-50%); /* perfect horizontal centering */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#qrcode {
+    border: 2px solid #00eaff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px #00eaff;
+    animation: qrGlow 2s infinite alternate;
+}
+
+@keyframes qrGlow {
+    0% { box-shadow: 0 0 10px #00eaff; }
+    100% { box-shadow: 0 0 25px #00eaff; }
+}
+
