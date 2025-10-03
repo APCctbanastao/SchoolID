@@ -5,14 +5,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
     height: 100vh;
     overflow: hidden;
     position: relative;
 }
 
-/* Starry background */
+/* Starry animated background */
 body::before {
     content: "";
     position: absolute;
@@ -29,10 +27,17 @@ body::before {
     to { transform: translate(-1000px, -1000px); }
 }
 
-/* ID Card */
+/* Container for front + back cards */
+.cards-container {
+    display: flex;
+    gap: 20px;              /* space between front and back */
+    align-items: stretch;    /* ensures both cards have same height */
+}
+
+/* ID Card common styling */
 .id-card {
     width: 360px;
-    height: 520px; /* increased height to fit QR code */
+    min-height: 500px;  /* allows card to grow for info + QR */
     border: 2px solid #ffd600;
     border-radius: 50px / 25px;
     background: rgba(10, 20, 40, 0.95);
@@ -43,8 +48,7 @@ body::before {
     position: relative;
     overflow: hidden;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* pushes QR to bottom */
+    flex-direction: column; /* stack content vertically */
 }
 
 /* Glow border */
@@ -67,7 +71,10 @@ body::before {
     z-index: 0;
 }
 
-.id-card * { position: relative; z-index: 1; }
+.id-card * {
+    position: relative;
+    z-index: 1;
+}
 
 /* Logos and images */
 .logo {
@@ -103,15 +110,18 @@ body::before {
     color: #e0f7fa;
 }
 
-.info strong { color: #00eaff; text-shadow: 0 0 6px #00eaff; }
+.info strong {
+    color: #00eaff;
+    text-shadow: 0 0 6px #00eaff;
+}
 
-/* Back ID styling */
+/* Back card specific */
 .id-card.back {
     background: rgba(20, 20, 20, 0.95);
     text-align: left;
-    height: 520px; /* same as front */
 }
 
+/* Back header */
 .back-header {
     font-size: 20px;
     font-weight: bold;
@@ -122,20 +132,24 @@ body::before {
     text-shadow: 0 0 10px #00eaff, 0 0 20px #008c9e;
 }
 
+/* Details on back */
 .details {
     font-size: 16px;
     color: #e0f7fa;
     line-height: 1.6;
 }
 
-.details strong { color: #00eaff; }
+.details strong {
+    color: #00eaff;
+}
 
 /* QR code container */
 .qr-code-container {
-    display: flex;
-    justify-content: center; /* center horizontally */
+    display: block;                  /* flows below info naturally */
+    margin: 20px auto 0 auto;        /* spacing from info, centered horizontally */
 }
 
+/* QR canvas style */
 #qrcode {
     width: 120px;
     height: 120px;
