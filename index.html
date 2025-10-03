@@ -6,39 +6,40 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
+<div class="cards-container">
+    <!-- Front ID Card -->
+    <div class="id-card">
+        <img src="Galactic_Republic_Symbol.webp" class="gar-logo">
+        <div class="logo">Grand Army of the Republic</div>
+        <img src="0d36418597d223ec0bf6a4f0aaaedb89.jpg" class="student-photo">
 
-<!-- Front ID Card -->
-<div class="id-card">
-    <img src="Galactic_Republic_Symbol.webp" class="gar-logo">
-    <div class="logo">Grand Army of the Republic</div>
-    <img src="0d36418597d223ec0bf6a4f0aaaedb89.jpg" class="student-photo">
+        <div class="info">
+            <p><strong>Name:</strong> Captain Rex of the 501st Legion </p>
+            <p><strong>Course & Year:</strong> ARC 1st year</p>
+            <p><strong>ID Number:</strong> CT-7567</p>
+        </div>
 
-    <div class="info">
-        <p><strong>Name:</strong> Captain Rex of the 501st Legion </p>
-        <p><strong>Course & Year:</strong> ARC 1st year</p>
-        <p><strong>ID Number:</strong> CT-7567</p>
+        <div class="qr-code-container">
+            <canvas id="qrcode"></canvas>
+        </div>
     </div>
 
-    <!-- QR code container -->
-    <div class="qr-code-container">
-        <canvas id="qrcode"></canvas>
-    </div>
-</div>
-
-<!-- Back ID Card -->
-<div class="id-card back">
-    <div class="back-header">Clone Trooper Profile</div>
-    <div class="details">
-        <p><strong>Name:</strong> Rex</p>
-        <p><strong>Designation:</strong> CT-7567</p>
-        <p><strong>Rank:</strong> Captain</p>
-        <p><strong>Unit:</strong> 501st Legion</p>
-        <p><strong>Height:</strong> 1.83 m</p>
-        <p><strong>Weight:</strong> 84 kg</p>
-        <p><strong>Hair:</strong> Black (shaved)</p>
-        <p><strong>Eyes:</strong> Brown</p>
-        <p><strong>Species:</strong> Human (Clone)</p>
-        <p><strong>Homeworld:</strong> Kamino</p>
+    <!-- Back ID Card -->
+    <div class="id-card back">
+        <div class="back-header">Clone Trooper Profile</div>
+        <div class="details">
+            <p><strong>Name:</strong> Rex</p>
+            <p><strong>Designation:</strong> CT-7567</p>
+            <p><strong>Rank:</strong> Captain</p>
+            <p><strong>Unit:</strong> 501st Legion</p>
+            <p><strong>Height:</strong> 1.83 m</p>
+            <p><strong>Weight:</strong> 84 kg</p>
+            <p><strong>Hair:</strong> Black (shaved)</p>
+            <p><strong>Eyes:</strong> Brown</p>
+            <p><strong>Species:</strong> Human (Clone)</p>
+            <p><strong>Homeworld:</strong> Kamino</p>
+        </div>
     </div>
 </div>
 
@@ -60,6 +61,7 @@ window.addEventListener('DOMContentLoaded', () => {
 </script>
 
     
+
 
 
 
