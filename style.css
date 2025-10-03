@@ -1,15 +1,19 @@
+/* General body */
 body {
-	font-family: Orbitron, sans-serif;
-	background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-	color: #ffffff;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	overflow: hidden;
+    font-family: Orbitron, sans-serif;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
 }
 
-/* Animated starry effect */
+/* Starry effect */
 body::before {
     content: "";
     position: absolute;
@@ -18,6 +22,7 @@ body::before {
     background: transparent url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
     animation: stars 100s linear infinite;
     opacity: 0.5;
+    z-index: -1;
 }
 
 @keyframes stars {
@@ -25,14 +30,15 @@ body::before {
     to { transform: translate(-1000px, -1000px); }
 }
 
+/* ID Card styling */
 .id-card {
     width: 360px;
-    border: 2px solid #ffd600; /* change border to yellow too */
+    border: 2px solid #ffd600;
     border-radius: 50px / 25px;
-    background: rgba(10, 20, 40, 0.95); 
+    background: rgba(10, 20, 40, 0.95);
     padding: 20px;
     text-align: center;
-    box-shadow: 0 0 20px #ffd600, 0 0 40px #008c9e inset; /* yellow glow instead of blue-green */
+    box-shadow: 0 0 20px #ffd600, 0 0 40px #008c9e inset;
     backdrop-filter: blur(6px);
     position: relative;
     overflow: hidden;
@@ -53,17 +59,17 @@ body::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.4); /* dark overlay */
+    background: rgba(0, 0, 0, 0.4);
     border-radius: 50px / 25px;
     z-index: 0;
 }
 
 .id-card * {
     position: relative;
-    z-index: 1; /* make sure text & images are above overlay */
+    z-index: 1;
 }
 
-/* Logo text */
+/* Logo and images */
 .logo {
     font-size: 22px;
     font-weight: bold;
@@ -73,18 +79,14 @@ body::before {
     text-shadow: 0 0 10px #00eaff, 0 0 20px #008c9e;
 }
 
-/* GAR Logo */
 .gar-logo {
     width: 60px;
     height: auto;
-    margin-bottom: 8px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 8px auto;
     filter: drop-shadow(0 0 6px #00eaff);
 }
 
-/* Student photo */
 .student-photo {
     width: 160px;
     height: auto;
@@ -107,19 +109,12 @@ body::before {
     text-shadow: 0 0 6px #00eaff;
 }
 
-/* Back of the ID */
+/* Back ID styling */
 .id-card.back {
-    background: rgba(20, 20, 20, 0.95); /* darker than the front */
-    border: 2px solid #ffd600;
-    border-radius: 50px / 25px;
-    padding: 20px;
+    background: rgba(20, 20, 20, 0.95);
     text-align: left;
-    box-shadow: 0 0 20px #ffd600, 0 0 40px #008c9e inset;
-    backdrop-filter: blur(6px);
-    margin-left: 20px; /* space between front and back if shown together */
 }
 
-/* Header on the back */
 .back-header {
     font-size: 20px;
     font-weight: bold;
@@ -130,7 +125,6 @@ body::before {
     text-shadow: 0 0 10px #00eaff, 0 0 20px #008c9e;
 }
 
-/* Details */
 .details {
     font-size: 16px;
     color: #e0f7fa;
@@ -141,11 +135,12 @@ body::before {
     color: #00eaff;
 }
 
+/* QR code styling */
 .qr-code-container {
     position: absolute;
-    bottom: 20px;      /* distance from bottom edge */
-    left: 50%;         /* center horizontally */
-    transform: translateX(-50%); /* perfect horizontal centering */
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -162,4 +157,3 @@ body::before {
     0% { box-shadow: 0 0 10px #00eaff; }
     100% { box-shadow: 0 0 25px #00eaff; }
 }
-
