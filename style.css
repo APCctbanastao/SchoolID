@@ -79,7 +79,7 @@ body::before {
 }
 
 .logo {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
     color: #00eaff;
     text-transform: uppercase;
@@ -95,6 +95,11 @@ body::before {
     filter: drop-shadow(0 0 6px #00eaff);
 }
 
+.photo-container {
+    position: relative;
+    display: inline-block;
+}
+
 .student-photo {
     width: 160px;
     height: auto;
@@ -102,6 +107,15 @@ body::before {
     border: 2px solid #00eaff;
     box-shadow: 0 0 15px #00eaff;
     margin-bottom: 15px;
+}
+
+.chip-image {
+    position: absolute;
+    top: 240px;
+    right: 65px;
+    width: 65px;   
+    height: auto;
+    border-radius: 4px;
 }
 
 .info {
@@ -132,7 +146,7 @@ body::before {
 }
 
 .details {
-    font-size: 16px;
+    font-size: 20px;
     color: #e0f7fa;
     line-height: 1.6;
 }
@@ -161,4 +175,3 @@ body::before {
     0% { box-shadow: 0 0 10px #00eaff; }
     100% { box-shadow: 0 0 25px #00eaff; }
 }
-
