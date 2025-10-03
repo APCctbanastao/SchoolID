@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -42,20 +43,21 @@
 </div>
 
 <!-- QR code script -->
-<script src="https://apcctbanastao.github.io/SchoolID/"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
 <script>
 window.addEventListener('DOMContentLoaded', () => {
+    const canvas = document.getElementById('qrcode');
     const qrUrl = 'https://yourusername.github.io/SchoolID/'; // <-- replace with your GitHub Pages URL
-    QRCode.toCanvas(document.getElementById('qrcode'), qrUrl, {
+
+    QRCode.toCanvas(canvas, qrUrl, {
         width: 120,
-        color: { dark: '#00eaff', light: 'transparent' }
+        color: { dark: '#00eaff', light: '#0a1410' } // dark background matches card
     }, function(error) {
         if(error) console.error(error);
-        console.log('QR code generated!');
+        else console.log('QR code generated!');
     });
 });
 </script>
 
-</body>
-</html>
+
 
